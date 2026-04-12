@@ -27,4 +27,9 @@ export class App {
 
     this.linx = new CollectionItem();
   }
+
+  increaseCount() {
+    this.count++;
+  }
+  
 }
