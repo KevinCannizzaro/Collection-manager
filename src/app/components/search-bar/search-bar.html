@@ -6,6 +6,7 @@
         placeholder="Recherche..." 
         autocomplete="off" 
         [ngModel]="search()"
+        (ngModelChange)="updateSearch($event)"
     />
     <button (click)="searchClick()">Search</button>
 </div>

@@ -10,10 +10,15 @@ import { FormsModule } from '@angular/forms';
 export class SearchBar {
 
   search = input("initial");
+  searchChange = output<string>();
   searchButtonClicked: OutputEmitterRef<void> = output<void>(); 
 
   searchClick() {
     this.searchButtonClicked.emit();
+  }
+
+  updateSearch(searchText: string) {
+    this.searchChange.emit(searchText);
   }
 
 }
